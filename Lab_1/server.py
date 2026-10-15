@@ -1,6 +1,7 @@
 # first of all import the socket library
 import socket
 import pandas as pd # in case of error, install pnadas using: pip install pandas
+
 # Create an empty Pandas DataFrame
 df = pd.DataFrame(columns=['Temp', 'Humd', 'Label']) # Label: 1 means valid, 0 means invalid
 # next create a socket object
@@ -25,7 +26,7 @@ c, addr = s.accept()
 print ('Got connection from', addr)
 # a forever loop until we interrupt it or
 # an error occurs
-i = 10 # only 10 reading will be taken. Increase it to higher according to you plan.
+i = 1000 # only 10 reading will be taken. Increase it to higher according to you plan.
 while i>=0:
 #receive data from client
     client = c.recv(1024)
@@ -37,7 +38,8 @@ while i>=0:
         'Humd': hum,
         'Label': 1
     }
-    df = df._append(new_data, ignore_index=True)
+    #df = df._append(new_data, ignore_index=True)
+    df = pd.concat([df, pd.DataFrame([new_data])], ignore_index=True)
     #print it
     print(data)
     i = i - 1
