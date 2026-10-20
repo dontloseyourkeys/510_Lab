@@ -18,3 +18,44 @@ deployment for future applications.
 
 
 '''
+
+
+#load class
+import numpy as np
+import pandas as pd # in case it's not installed then install using conda create
+-c conda-forge -n name_of_my_env python pandas
+# more installations information can be found:
+https://pandas.pydata.org/docs/getting_started/install.html
+import os
+#load sklearn module for creating and evaluating ML models. In case sklearn isn't
+installed,
+#follow this link https://scikit-learn.org/stable/install.html for further details
+on the installation process.
+from sklearn.neighbors import KNeighborsClassifier #load your classifier. In this
+code, I have used KNN. You can choose other algorithms. You have to use at least
+3 to complete this.
+from sklearn.preprocessing import StandardScaler #module for perform scaling
+
+from sklearn.model_selection import train_test_split #module for splitting
+datatset
+from sklearn import metrics #module for evaluating performance
+
+#load your data
+df = pd.read_csv("data.csv") #change the name accordingly
+df.head() # prints top 5 rows from the datatset to check data is load or not
+
+
+# Check for missing values
+missing_values = df.isnull().sum()
+print("Missing Values:\n", missing_valu
+      
+      
+#remove duplicatesd
+df = df.drop_duplicates()
+
+# prepare features
+x = df.drop(['Label'],axis=1) #remove class or label
+y = df['Label'] #load label
+
+x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=.2) #split
+datatset. Here ratio is 80:20. Change accordingl
