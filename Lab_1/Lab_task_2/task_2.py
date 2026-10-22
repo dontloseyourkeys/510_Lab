@@ -29,7 +29,6 @@ import pandas as pd
 
 '''in case it's not installed then install using conda create
 
-
 -c conda-forge -n name_of_my_env python pandas
 # more installations information can be found:
 https://pandas.pydata.org/docs/getting_started/install.html'''
