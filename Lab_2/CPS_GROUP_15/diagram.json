@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "author": "August",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 19.2,
+      "left": 148.84,
+      "attrs": { "env": "micropython-20260406-v1.28.0" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 15.6, "left": -25, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 71.15,
+      "left": 48,
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -18.9, "left": -139.8, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 55.6, "left": 374.4, "attrs": {} },
+    {
+      "type": "wokwi-led-ring",
+      "id": "ring1",
+      "top": -220.16,
+      "left": 269.99,
+      "attrs": { "pixels": "16" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "led1:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "led1:A", "r1:1", "#8f4814", [ "v0" ] ],
+    [ "r1:2", "esp:26", "#8f4814", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.1", "red", [ "v0" ] ],
+    [ "dht1:VCC", "esp:3V3", "orange", [ "v19.2", "h249.6", "v-67.2" ] ],
+    [ "dht1:SDA", "esp:12", "gold", [ "v0" ] ],
+    [ "servo1:V+", "esp:3V3", "green", [ "h-19.2", "v-115.1", "h-201.75" ] ],
+    [ "servo1:GND", "esp:GND.3", "blue", [ "h0" ] ],
+    [ "servo1:PWM", "esp:2", "violet", [ "h-96", "v57.8" ] ],
+    [ "ring1:GND", "esp:GND.2", "gray", [ "v0" ] ],
+    [ "ring1:VCC", "esp:3V3", "purple", [ "v19.2", "h-201.6", "v96" ] ],
+    [ "ring1:DIN", "esp:4", "cyan", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
