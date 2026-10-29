@@ -20,7 +20,7 @@ CLIENT_ID = "ujaisldaaasdfgh_laslksdja1" # Unique client ID for this device
 
 # ===== Topic Configuration =====
 # Change the group number here only, every topic below rebuilds automatically
-group_number = "group_10"
+group_number = "group_15"
 BASE_TOPIC = f"cps/topic/{group_number}" # Common prefix for all topics
 
 TOPIC_PUB = f"{BASE_TOPIC}/Tempdata" # Device publishes temp/humidity here
@@ -30,7 +30,7 @@ TOPIC_NEOPIXEL = f"{BASE_TOPIC}/lights/neopixel" # Subscribe: NeoPixel color
 # ================================
 
 # ===== Initialize Hardware =====
-led = Pin(LED_PIN, Pin.OUT) # Configure LED pin as output
+led = Pin(LED_PIN, Pin.OUT) # Configure LED pin s output
 led.value(0) # Start with LED off
 
 # DHT22 Setup
