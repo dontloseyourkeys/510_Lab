@@ -1,0 +1,586 @@
+[
+    {
+        "id": "2fe84bdfcf772d96",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e89c5aad39807625",
+        "type": "ui_tab",
+        "name": "Do not use",
+        "icon": "dashboard",
+        "disabled": true,
+        "hidden": false
+    },
+    {
+        "id": "85a8cb16c6c1632e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "12607b6693351fc4",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "59c441b40e2d1c58",
+        "type": "ui_group",
+        "name": "Our Dashboard",
+        "tab": "12607b6693351fc4",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d614aa9eeaa47f6c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "63486427ade28b10",
+        "type": "ui_gauge",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "group": "59c441b40e2d1c58",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature Gauge",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-20",
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8d6f2644844e62ef",
+        "type": "ui_gauge",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "group": "59c441b40e2d1c58",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity Gauge",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 840,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "6d989f3a4093ce20",
+        "type": "ui_chart",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "group": "59c441b40e2d1c58",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 850,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a3cd6464fd5311a",
+        "type": "ui_chart",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "group": "59c441b40e2d1c58",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 840,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0f02ab429119537",
+        "type": "ui_switch",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "label": "LED",
+        "tooltip": "",
+        "group": "59c441b40e2d1c58",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 350,
+        "y": 700,
+        "wires": [
+            [
+                "24859e5fb3133bac"
+            ]
+        ]
+    },
+    {
+        "id": "6759ccb7979bd31c",
+        "type": "ui_slider",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "label": "Servo",
+        "tooltip": "",
+        "group": "59c441b40e2d1c58",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 350,
+        "y": 760,
+        "wires": [
+            [
+                "ff0b981eaadd41ea"
+            ]
+        ]
+    },
+    {
+        "id": "42a6df83586484e7",
+        "type": "ui_colour_picker",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "label": "NeoPixel Color Picker",
+        "group": "59c441b40e2d1c58",
+        "format": "rgb",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 400,
+        "y": 840,
+        "wires": [
+            [
+                "df0eb16c3496332f"
+            ]
+        ]
+    },
+    {
+        "id": "24859e5fb3133bac",
+        "type": "mqtt out",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "topic": "cps/topic/group_15/lights",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d614aa9eeaa47f6c",
+        "x": 710,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "ff0b981eaadd41ea",
+        "type": "mqtt out",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "topic": "cps/topic/group_15/servo",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d614aa9eeaa47f6c",
+        "x": 730,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "df0eb16c3496332f",
+        "type": "function",
+        "z": "2fe84bdfcf772d96",
+        "name": "Parse RGB values",
+        "func": "msg.payload = msg.payload.replace(\"rgb(\", \"\").replace(\")\", \"\"); \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 840,
+        "wires": [
+            [
+                "61b359325e85824d"
+            ]
+        ]
+    },
+    {
+        "id": "61b359325e85824d",
+        "type": "mqtt out",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "topic": "cps/topic/group_15/lights/neopixel",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d614aa9eeaa47f6c",
+        "x": 920,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "a6998eb665fac951",
+        "type": "mqtt in",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "topic": "cps/topic/group_15/Tempdata",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "d614aa9eeaa47f6c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 460,
+        "wires": [
+            [
+                "130d1dd882660dfc",
+                "b510ae7c97514f22",
+                "1bc104ecd65b421e"
+            ]
+        ]
+    },
+    {
+        "id": "130d1dd882660dfc",
+        "type": "function",
+        "z": "2fe84bdfcf772d96",
+        "name": "Extract temperature",
+        "func": "var input = msg.payload; // Assuming the input is in msg.payload \n// Remove any leading or trailing whitespace \ninput = input.trim(); \n// Split the input string using commas as the delimiter \nvar values = input.split(','); \n// Remove leading and trailing whitespace from each value and convert to float \nvalues = values.map(function (value) { \n    return parseFloat(value.trim()); \n}); msg.payload = values[0]; \n// Set the output payload to the array of float values \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 460,
+        "wires": [
+            [
+                "6d989f3a4093ce20",
+                "63486427ade28b10"
+            ]
+        ]
+    },
+    {
+        "id": "b510ae7c97514f22",
+        "type": "function",
+        "z": "2fe84bdfcf772d96",
+        "name": "Extract Humidity",
+        "func": "var input = msg.payload; // Assuming the input is in msg.payload\n// Remove any leading or trailing whitespace\ninput = input.trim();\n// Split the input string using commas as the delimiter\nvar values = input.split(',');\n// Remove leading and trailing whitespace from each value and convert to float\nvalues = values.map(function (value) {\n    return parseFloat(value.trim());\n});\nmsg.payload = values[1]; // Set the output payload to the array of float values\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 620,
+        "wires": [
+            [
+                "8a3cd6464fd5311a",
+                "8d6f2644844e62ef"
+            ]
+        ]
+    },
+    {
+        "id": "16812689dfe19c3c",
+        "type": "file",
+        "z": "2fe84bdfcf772d96",
+        "name": "",
+        "filename": "C:\\Users\\asiab\\OneDrive - University of Calgary\\5th year\\F26\\ENDG_510_Cyberphysical_Systems\\510_Lab\\510_Lab\\Lab_2\\Data\\data.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1240,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1bc104ecd65b421e",
+        "type": "function",
+        "z": "2fe84bdfcf772d96",
+        "name": "Add Timestamp",
+        "func": "var timestamp = new Date().toISOString(); // Get the current timestamp in ISO8601 format\nvar value = msg.payload; // Get the input value\n\n// Create the output message\nmsg.payload = timestamp + \", \" + value;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 340,
+        "wires": [
+            [
+                "16812689dfe19c3c"
+            ]
+        ]
+    },
+    {
+        "id": "ac8a44d4c3ab1c26",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
